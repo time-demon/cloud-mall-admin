@@ -1,4 +1,4 @@
-# myapp
+# 时光云商城后台管理系统 Vue2 + Element UI
 
 ## Project setup
 ```
