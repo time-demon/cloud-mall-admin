@@ -10,7 +10,7 @@
             <div class="operationBox" style="display: flex; vertical-align: top;justify-content: space-between;">
 
 
-                <div style="display: flex; vertical-align: top;">
+                <div style="display: flex; vertical-align: top;" class="goodsListForm">
                     <el-form :inline="true" :model="goodsListSearchForm" class="demo-form-block"
                         style="display: inline-block;margin: 0;" :style="{ width: goodsListSearchFormWidth }">
                         <el-form-item label="" style="margin: 0 10px 0 0;width: 145px;">

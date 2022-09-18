@@ -9,29 +9,6 @@
                 <p>数据中心 - 每隔10秒自动更新一次数据</p>
             </h3>
             <div class="dataBox2">
-                <div class="updateNotice">
-                    <div class="environment">
-                        <h1 class="panel-title environment-title">
-                            <i class="el-icon-warning"></i> 环境信息
-                        </h1>
-                        <div class="environment-content">
-                        </div>
-                    </div>
-                    <div class="updateNoticeBox">
-                        <h1 class="panel-title updateNoticeBox-title">
-                            <i class="el-icon-message-solid"></i> 更新&公告
-                        </h1>
-                        <div class="updateNoticeBox-content">
-                            <el-timeline>
-                                <el-timeline-item v-for="(activity, index) in activities" :key="index"
-                                    :icon="activity.icon" :type="activity.type" :color="activity.color"
-                                    :size="activity.size" :timestamp="activity.timestamp">
-                                    {{ activity.content }}
-                                </el-timeline-item>
-                            </el-timeline>
-                        </div>
-                    </div>
-                </div>
                 <div class="panelBox">
                     <div class="panel-longBox">
                         <h1 class="panel-title">
@@ -87,6 +64,29 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="updateNotice">
+                    <div class="environment">
+                        <h1 class="panel-title environment-title">
+                            <i class="el-icon-warning"></i> 环境信息
+                        </h1>
+                        <div class="environment-content">
+                        </div>
+                    </div>
+                    <div class="updateNoticeBox">
+                        <h1 class="panel-title updateNoticeBox-title">
+                            <i class="el-icon-message-solid"></i> 更新&公告
+                        </h1>
+                        <div class="updateNoticeBox-content">
+                            <el-timeline>
+                                <el-timeline-item v-for="(activity, index) in activities" :key="index"
+                                    :icon="activity.icon" :type="activity.type" :color="activity.color"
+                                    :size="activity.size" :timestamp="activity.timestamp">
+                                    {{ activity.content }}
+                                </el-timeline-item>
+                            </el-timeline>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -257,6 +257,7 @@ export default {
         flex-wrap: wrap;
 
         >.updateNotice {
+            order: 1;
             width: 320px;
             height: auto;
             padding-right: 20px;
@@ -302,6 +303,7 @@ export default {
 
         >.panelBox {
             flex: 1;
+            order: 2;
 
             >.panel-longBox {
                 margin-bottom: 25px;
@@ -323,12 +325,12 @@ export default {
 
                 .panel-longBox-nav {
                     display: grid;
-                    grid-template-columns: repeat(8, 1fr);
+                    grid-template-columns: repeat(auto-fill, 102px);
                     justify-content: space-between;
                     ;
 
                     >p {
-                        padding: 0 25px;
+                        margin: 5px 25px;
                         cursor: pointer;
                         font-size: 13px;
                         overflow: hidden;
